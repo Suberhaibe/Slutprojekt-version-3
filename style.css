@@ -1,0 +1,23 @@
+Header{
+    background:cyan;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 15px;
+
+}
+.global-menu{
+    justify-self: end;
+}
+.global-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.global-menu li{
+    margin: left rem;
+    display: inline;
+
+}
