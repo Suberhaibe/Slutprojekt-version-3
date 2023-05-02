@@ -52,26 +52,32 @@ li a:hover {
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    justify-items: center;
   }
   
   .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto auto;
     gap: 20px;
   }
   
   .form {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: orange;
+    padding: 10px;
   }
   
   .info {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: orange;
+    padding: 10px;
     position: relative; 
+  }
+
+  image-container{
+    padding: 10px;
   }
   
   .info ul {
@@ -84,25 +90,13 @@ li a:hover {
     margin-bottom: 10px;
   }
   
- 
-  @media screen and (max-width: 768px) {
-    .container {
-      grid-template-columns: 1fr;
-    }
-    
-    .content {
-      grid-template-columns: 1fr;
-    }
-    
-    .form, .info {
-      padding: 10px;
-    }
-    
-    .image-container {
-      top: -30px; 
-    }
-  }
-  
+  footer{
+    grid-area: footer;
+    text-align: center;
+    color: white;
+    background-color: orange;
+}
+
 
 @media screen and (max-width: 800px){
 
