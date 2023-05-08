@@ -1,45 +1,46 @@
-.wrapper{
+.wrapper{ /* klass som används för att definiera en grid layout med fyra kolumner */
     display:grid;
-    grid-template-rows:auto auto auto auto;
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr 3fr 1fr 1fr ;
+    grid-template-columns: auto;
     grid-template-areas: 
     "header"
     "nav"
     "main"
-    "footer"
+    "footer";
+    text-align: center; /* sätter center för allt innehållet */
   }
 
 
-header{
+header{ /* stylar header elementet */
     grid-area: header;
     text-align: center;
     background-color: gray;
-    padding: 15px;
+    padding: 15px; /* lägger till utrymme mellan elementets innehål och dess ram */
     margin: 0;
 
 }
 
 
-nav{
+nav{ /* stylar nav elementet genom att centrera det och lägga till en padding */
     grid-area: nav;
-    padding: 14px;
+    padding: 10px;
 }
 
-nav ul{
+nav ul{ /* skapar ett gridlayout för listan */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-content:center ;
     justify-items: center;
     padding: 0%;
     margin: 0%;
 }
-nav li{
+nav li{ /* riktar sig till all listelement */
     list-style: none;
     text-align: center;
-    font-size: 1em;
+    font-size: 12px;
 }
 
-nav a{
+nav a{ /* stylar länkarna i nav elementet */
     text-decoration: none;
     background-color: black;
     padding: 15px;
@@ -47,24 +48,24 @@ nav a{
     border-radius: 10px;
 }
 
-li a:hover {
+li a:hover { /* ändrar färgen när användaren hoverar */
     background-color: orange;
   }
-  main{
-    padding: auto;
-  }
 
-  #Begrepp {
-    border-collapse: collapse;
+
+  #Begrepp { /* formolerar taballen en särskild ID */
+    border-collapse: collapse; /* slås gränserna ihop til en enda linje */
     width: 100%;
   }
-  
-  #Begrepp td, #Begrepp th {
+
+  #Begrepp td, #Begrepp th { /* riktar sig til td och th  element */
     border-radius: 2px #ddd;
     padding: 5px;
     border-radius: 25px;
     text-align: center;
+  
   }
+
   
   #Begrepp tr:nth-child(even){background-color: #9da74c;}
   
@@ -77,11 +78,36 @@ li a:hover {
     background-color:orange;
     color: white;
   }
-  
 
+  .wrapper img {
+    width: 500px;
+  }
 
-  
-  footer ul {
+  form{ /* stylar formulär */
+    grid-area:main;
+    margin:auto;
+    border-radius: 2px;
+    padding: 23px;
+    text-align: center;
+
+}
+
+input{ /* stylar input elementen i formuläret */
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+label{ /* stylar etiketterna i förmuläret */
+    font-size: 40px;
+}
+
+iframe{
+  width: 450px;
+  height: 250px;
+
+}
+
+  footer ul{ /* stylar footrer elementet som är sidansfot */
     grid-area: footer;
     text-align: center;
     color:black;
@@ -89,9 +115,6 @@ li a:hover {
     padding: 50px;
     justify-content: center;
     list-style:none;
-}
+  }
 
-
-@media screen and (max-width: 800px){
-
-}
+  @media screen (max-width: 800px) {  } /* justerar utseendet på webbsidan för enheter */
