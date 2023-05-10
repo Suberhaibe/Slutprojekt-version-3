@@ -104,7 +104,7 @@ label{ /* stylar etiketterna i förmuläret */
 iframe{
   width: 450px;
   height: 250px;
-
+  border= 0;
 }
 
   footer ul{ /* stylar footrer elementet som är sidansfot */

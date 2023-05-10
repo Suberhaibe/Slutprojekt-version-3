@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <h1>IT-UTBILDNING</h1>
+            <h1>IT-UTBILDNING STÖD</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Startsida</a></li>
@@ -24,14 +24,18 @@
               <main>
                 <section>
                     <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="">
-                    <form>
-                      <label for="username">Användarnamn:</label>
-                      <input type="text" id="username" name="username">
-                      <br>
-                      <label for="password">Lösenord:</label>
-                      <input type="password" id="password" name="password">
-                      <br>
-                      <input type="submit" value="Logga in">
+                    <form action="login.php" method="post"> <!--öppnar en formulärt tagg som anger en handling action metoden är post-->
+                        <p>
+                            <label for="un">Användarnamn:</label> <!--label för att skapa etikett och det innehåller användnamn och kopplas till inmattningsfältet mha attributet for och den har samma värde som inmatningsfältet ID "un"-->
+                            <input name="username" id="un" required/> <!--input för inmatningsfälte och har ett namn username och required kräver att använderen fyller i fältet-->
+                        </p>
+                        <p>
+                            <label for="pw">Lösenord:</label>
+                            <input name="password" type="password" id="pw" required/>
+                        </p>
+                        <p>
+                            <input type="submit" value="logga in" /> <!--skapar en knapp och den har värde logga in-->
+                        </p>
                     </form>  
                 </section>
               </main>
